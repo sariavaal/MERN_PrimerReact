@@ -1,3 +1,4 @@
+import PropTypes from "prop-types"
 //Crea un componente PersonCard con las propiedades firstName, lastName, age, y hairColor
 function PersonCard(props) {
     return (
@@ -8,5 +9,12 @@ function PersonCard(props) {
       </div>
     )
   }
+  PersonCard.propTypes = {
+    firstName: PropTypes.string.isRequired,
+    lastName: PropTypes.string.isRequired,
+    age: PropTypes.number.isRequired,
+    hairColor: PropTypes.string.isRequired,
+  };
+  
 
 export default PersonCard
